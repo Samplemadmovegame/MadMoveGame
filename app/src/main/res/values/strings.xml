@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MadMoveGame</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_1">Welcome to MADMOVE GAMES</string>
+    <string name="intro_2">We Predict, You Win</string>
+    <string name="intro_3">Freely Available</string>
+    <string name="intro_4">Keep up to date!</string>
+    <string name="bottom_1">Best Prediction app available helping you free</string>
+    <string name="bottom_2">Need Predictions,tip? You are at right place. We poat predictions regularly for Every Match</string>
+    <string name="bottom_3">We provide All PRO Prediction/tips for FREE</string>
+    <string name="bottom_4">Get Notified for injured, Unavailable players and never loss</string>
+
+    <string name="skip">SKIP</string>
+
 </resources>
