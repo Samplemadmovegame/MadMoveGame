@@ -1,6 +1,9 @@
 package com.example.madmovegame.home.model;
 
-public class AllSports {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class AllSports implements Parcelable {
 
     private String team1, team2, leagueName;
     private long timeleft;
@@ -17,6 +20,38 @@ public class AllSports {
         this.leagueName = leagueName;
         this.timeleft = timeleft;
     }
+
+    protected AllSports(Parcel in) {
+        team1 = in.readString();
+        team2 = in.readString();
+        leagueName = in.readString();
+        timeleft = in.readLong();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(team1);
+        dest.writeString(team2);
+        dest.writeString(leagueName);
+        dest.writeLong(timeleft);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<AllSports> CREATOR = new Creator<AllSports>() {
+        @Override
+        public AllSports createFromParcel(Parcel in) {
+            return new AllSports(in);
+        }
+
+        @Override
+        public AllSports[] newArray(int size) {
+            return new AllSports[size];
+        }
+    };
 
     public String getTeam1() {
         return team1;

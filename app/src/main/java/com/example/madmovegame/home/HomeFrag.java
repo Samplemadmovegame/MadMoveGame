@@ -1,6 +1,7 @@
 package com.example.madmovegame.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 
 import com.example.madmovegame.R;
+import com.example.madmovegame.contest.ContestActivity;
 import com.example.madmovegame.home.adapter.AllSportsListAdapter;
 import com.example.madmovegame.home.adapter.SportsListAdapter;
 import com.example.madmovegame.home.model.AllSports;
@@ -72,7 +74,9 @@ public class HomeFrag extends Fragment {
         mAllSportsListAdapter = new AllSportsListAdapter(getActivity(), HomeUtil.getAllSportsCricketList(), new AllSportsListAdapter.SportsListAdapterListener() {
             @Override
             public void onItemClick(AllSports sportName) {
-                Log.v(TAG, sportName.getLeagueName());
+                Intent intent = new Intent(getActivity(), ContestActivity.class);
+                intent.putExtra(ContestActivity.PARAM, sportName);
+                startActivity(intent);
             }
         });
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
