@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.adapter.ContestListAdapter;
@@ -23,6 +24,7 @@ public class ContestFrag extends Fragment {
     private RecyclerView mConstestRecyclerView;
     private ContestListAdapter mContestListAdapter;
     private OnContestFragmentInteractionListener mListener;
+    private Button createTeamBt;
 
     public ContestFrag() {
         // Required empty public constructor
@@ -50,6 +52,13 @@ public class ContestFrag extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contest, container, false);
         mConstestRecyclerView = view.findViewById(R.id.constest_recycler_view);
+        createTeamBt = view.findViewById(R.id.create_team_bt);
+        createTeamBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.openTeamAcitivity();
+            }
+        });
         return view;
     }
 
@@ -93,6 +102,7 @@ public class ContestFrag extends Fragment {
 
     public interface OnContestFragmentInteractionListener{
         void openContestInfo(Contest contest);
+        void openTeamAcitivity();
     }
 
 }

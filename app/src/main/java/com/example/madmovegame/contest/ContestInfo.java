@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.adapter.RankListAdapter;
@@ -19,7 +20,7 @@ import com.example.madmovegame.contest.model.Contest;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ContestInfo.OnFragmentInteractionListener} interface
+ * {@link ContestInfo.OnContestInfoFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link ContestInfo#newInstance} factory method to
  * create an instance of this fragment.
@@ -31,9 +32,10 @@ public class ContestInfo extends Fragment {
     private Contest mParam1;
     private RecyclerView mRankRecyclerView;
     private RankListAdapter mRankListAdapter;
+    private Button joinContestBt;
 
 
-    private OnFragmentInteractionListener mListener;
+    private OnContestInfoFragmentInteractionListener mListener;
 
     public ContestInfo() {
         // Required empty public constructor
@@ -61,8 +63,15 @@ public class ContestInfo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_contest_info, container, false);
-        mRankRecyclerView=view.findViewById(R.id.rank_recycler_view);
+        View view = inflater.inflate(R.layout.fragment_contest_info, container, false);
+        mRankRecyclerView = view.findViewById(R.id.rank_recycler_view);
+        joinContestBt = view.findViewById(R.id.join_contest_bt);
+        joinContestBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.openPaymentAcitvity(new Contest());
+            }
+        });
         return view;
     }
 
@@ -72,9 +81,8 @@ public class ContestInfo extends Fragment {
         setUpRankAdapter();
     }
 
-    public void setUpRankAdapter(){
-
-        mRankListAdapter=new RankListAdapter(getActivity(),new RankListAdapter.RankListAdapterListener(){
+    public void setUpRankAdapter() {
+        mRankListAdapter = new RankListAdapter(getActivity(), new RankListAdapter.RankListAdapterListener() {
             @Override
             public void onItemClick(Contest contest) {
 
@@ -89,12 +97,12 @@ public class ContestInfo extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
+        if (context instanceof OnContestInfoFragmentInteractionListener) {
+            mListener = (OnContestInfoFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
     }
 
     @Override
@@ -113,8 +121,8 @@ public class ContestInfo extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    public interface OnContestInfoFragmentInteractionListener {
         // TODO: Update argument type and name
-        void openContestInfo(Contest contest);
+        void openPaymentAcitvity(Contest contest);
     }
 }

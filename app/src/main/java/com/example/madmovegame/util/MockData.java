@@ -1,7 +1,10 @@
 package com.example.madmovegame.util;
 
+import com.example.madmovegame.Const;
 import com.example.madmovegame.contest.model.Contest;
 import com.example.madmovegame.contest.model.RankInfo;
+import com.example.madmovegame.payment.model.Payment;
+import com.example.madmovegame.team.model.Team;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +22,24 @@ public class MockData {
         List<RankInfo> list = new ArrayList<>();
         list.add(new RankInfo("#1", "DEW", "2000000"));
         list.add(new RankInfo("#2", "AAYU", "8900000"));
+        return list;
+    }
+
+
+    public static List<Payment> getPaymentInfo() {
+        List<Payment> list = new ArrayList<>();
+        list.add(new Payment(Const.CARD));
+        list.add(new Payment(Const.WALLET));
+        list.add(new Payment(Const.UPI));
+        list.add(new Payment(Const.NET_BANKING));
+        return list;
+    }
+
+    public static List<Team> getTeamInfo() {
+        List<Team> list = new ArrayList<>();
+        list.add(new Team("M Dhoni","87.5","8.0"));
+        list.add(new Team("M Dhoni","87.5","8.0"));
+        list.add(new Team("M Dhoni","87.5","8.0"));
         return list;
     }
 }
