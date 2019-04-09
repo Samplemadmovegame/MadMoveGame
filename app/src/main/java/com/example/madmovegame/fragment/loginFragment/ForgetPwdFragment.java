@@ -19,6 +19,15 @@ public class ForgetPwdFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static ForgetPwdFragment newInstance() {
+        
+        Bundle args = new Bundle();
+        
+        ForgetPwdFragment fragment = new ForgetPwdFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

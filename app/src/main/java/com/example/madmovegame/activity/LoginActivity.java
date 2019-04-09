@@ -20,18 +20,18 @@ public class LoginActivity extends AppCompatActivity
         setContentView(R.layout.activity_login);
 
         //Open Authentication Fragment
-        AuthenticationFragment authenticationFragment = new AuthenticationFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.container_view,authenticationFragment).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_view,AuthenticationFragment.newInstance())
+                .addToBackStack(null).commit();
     }
 
     @Override
     public void openForgetPasswordFragment() {
 
         //Open Forget Fragment
-        ForgetPwdFragment forgetPwdFragment = new ForgetPwdFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.container_view,forgetPwdFragment).commit();
+       getSupportFragmentManager().beginTransaction()
+               .replace(R.id.container_view,ForgetPwdFragment.newInstance())
+               .addToBackStack(null).commit();
 
     }
 
@@ -39,9 +39,9 @@ public class LoginActivity extends AppCompatActivity
     public void openCreateAccountFragment() {
 
         //Open Register Fragment
-        RegisterFragment registerFragment = new RegisterFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.container_view,registerFragment).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_view,RegisterFragment.newInstance())
+                .addToBackStack(null).commit();
 
     }
 

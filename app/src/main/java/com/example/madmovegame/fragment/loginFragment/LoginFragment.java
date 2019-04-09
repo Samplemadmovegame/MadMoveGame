@@ -4,6 +4,7 @@ package com.example.madmovegame.fragment.loginFragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.madmovegame.R;
+import com.example.madmovegame.utility.MadMoveUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,12 +23,22 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     private TextInputEditText mobileNumberTIEditText, passwordTIEditText;
     private TextView forgetPasswordTV, createAccountTV;
     private Button loginButton;
+    private TextInputLayout mobileNoTILayout,passwordTILayout;
 
     LoginFragmentListeners loginFragmentListeners;
 
 
     public LoginFragment() {
         // Required empty public constructor
+    }
+
+    public static LoginFragment newInstance() {
+        
+        Bundle args = new Bundle();
+        
+        LoginFragment fragment = new LoginFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 
@@ -41,6 +53,14 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         forgetPasswordTV = view.findViewById(R.id.forget_password_tv);
         createAccountTV = view.findViewById(R.id.create_account_tv);
+
+        mobileNoTILayout = view.findViewById(R.id.mobile_number_TILayout);
+        passwordTILayout = view.findViewById(R.id.password_TILayout);
+
+        MadMoveUtils.setAnimation(getActivity(),R.anim.right_to_left,forgetPasswordTV);
+
+        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,mobileNoTILayout);
+        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,passwordTILayout);
 
         loginButton = view.findViewById(R.id.login_button);
 

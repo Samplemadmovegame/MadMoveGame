@@ -16,10 +16,18 @@ import com.example.madmovegame.activity.LoginActivity;
  * A simple {@link Fragment} subclass.
  */
 public class IntroFragment4 extends Fragment {
-        private Button skipButton;
 
     public IntroFragment4() {
         // Required empty public constructor
+    }
+
+    public static IntroFragment4 newInstance() {
+        
+        Bundle args = new Bundle();
+        
+        IntroFragment4 fragment = new IntroFragment4();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 
@@ -27,20 +35,8 @@ public class IntroFragment4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_intro_fragment4, container, false);
+       return inflater.inflate(R.layout.fragment_intro_fragment4, container, false);
 
-        skipButton = view.findViewById(R.id.skip_button);
-
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //To Open LoginView
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-            }
-        });
-
-        return view;
     }
 
 }

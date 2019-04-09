@@ -16,11 +16,17 @@ import com.example.madmovegame.R;
  */
 public class IntroFragment2 extends Fragment {
 
-    private Button skipButton;
-
-
     public IntroFragment2() {
         // Required empty public constructor
+    }
+
+    public static IntroFragment2 newInstance() {
+
+        Bundle args = new Bundle();
+
+        IntroFragment2 fragment = new IntroFragment2();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 
@@ -28,21 +34,8 @@ public class IntroFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_intro_fragment2, container, false);
+      return  inflater.inflate(R.layout.fragment_intro_fragment2, container, false);
 
-        skipButton = view.findViewById(R.id.skip_button);
-
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                IntroFragment3 introFragment3 = new IntroFragment3();
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.add(R.id.container_view,introFragment3).addToBackStack(null).commit();
-            }
-        });
-
-        return view;
     }
 
 }

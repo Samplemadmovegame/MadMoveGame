@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/measure_10dp"
-    android:background="@color/colorWhite"
+    android:background="@color/colorDarkBlue"
     tools:context=".fragment.introductionFragment.IntroFragment4">
 
     <TextView
@@ -16,9 +16,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/intro_4"
-        android:textSize="@dimen/measure_16sp"
+        android:textSize="@dimen/measure_18sp"
         android:layout_marginTop="@dimen/measure_10dp"
-        android:textColor="@color/colorBlack"/>
+        android:textColor="@color/colorWhite"/>
 
     <ImageView
         android:id="@+id/madmove_icon"
@@ -30,21 +30,15 @@
         android:src="@drawable/splash_background"
         app:layout_constraintTop_toBottomOf="@+id/welcome_tv" />
 
-    <Button
-        android:id="@+id/skip_button"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/measure_36dp"
-        android:text="@string/skip"
-        android:layout_marginBottom="@dimen/measure_36dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/bottom_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bottom_4"
         android:layout_marginBottom="@dimen/measure_20dp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:textSize="@dimen/measure_14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

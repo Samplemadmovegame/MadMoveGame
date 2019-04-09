@@ -8,18 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.madmovegame.R;
+import com.example.madmovegame.utility.MadMoveUtils;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class IntroFragment1 extends Fragment {
-    private Button skipButton;
-
 
     public IntroFragment1() {
         // Required empty public constructor
+    }
+
+    public static IntroFragment1 newInstance() {
+
+        Bundle args = new Bundle();
+
+        IntroFragment1 fragment = new IntroFragment1();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 
@@ -27,23 +36,8 @@ public class IntroFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_intro_fragment1, container, false);
+        return inflater.inflate(R.layout.fragment_intro_fragment1, container, false);
 
-        skipButton = view.findViewById(R.id.skip_button);
-
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                IntroFragment2 introFragment2 = new IntroFragment2();
-                FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.add(R.id.container_view,introFragment2).commit();
-
-
-            }
-        });
-
-        return view;
     }
 
 }
