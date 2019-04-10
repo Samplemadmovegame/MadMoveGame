@@ -2,25 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_shop"
         android:icon="@drawable/ic_menu_camera"
-        android:title="Home"/>
+        android:title="@string/home" />
 
     <item
-        android:id="@+id/navigation_matches"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="Matches"/>
+        android:id="@+id/navigation_gifts"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/matches" />
 
     <item
-        android:id="@+id/navigation_feed"
-        android:icon="@drawable/ic_menu_share"
-        android:title="Feed"/>
-
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/feed" />
 
     <item
-        android:id="@+id/navigation_more"
-        android:icon="@drawable/ic_menu_send"
-        android:title="More"/>
-
-
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/more"/>
 </menu>
