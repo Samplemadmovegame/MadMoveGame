@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity
 
         //Open Authentication Fragment
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container_view,AuthenticationFragment.newInstance())
+                .replace(R.id.container_view, AuthenticationFragment.newInstance())
                 .addToBackStack(null).commit();
     }
 
@@ -29,9 +29,9 @@ public class LoginActivity extends AppCompatActivity
     public void openForgetPasswordFragment() {
 
         //Open Forget Fragment
-       getSupportFragmentManager().beginTransaction()
-               .replace(R.id.container_view,ForgetPwdFragment.newInstance())
-               .addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_view, ForgetPwdFragment.newInstance())
+                .addToBackStack(null).commit();
 
     }
 
@@ -40,14 +40,13 @@ public class LoginActivity extends AppCompatActivity
 
         //Open Register Fragment
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container_view,RegisterFragment.newInstance())
+                .replace(R.id.container_view, RegisterFragment.newInstance())
                 .addToBackStack(null).commit();
 
     }
 
     @Override
     public void openHomeFragment() {
-
         //Open Main Activity
         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
     }

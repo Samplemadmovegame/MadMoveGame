@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/measure_10dp"
-    android:background="@color/colorDarkBlue"
-    tools:context=".intro.IntroFragment3">
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/dim_10dp"
+    tools:context=".intro.IntroFragment1">
 
     <TextView
         android:id="@+id/welcome_tv"
@@ -17,28 +17,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/intro_3"
         android:textSize="@dimen/measure_18sp"
-        android:layout_marginTop="@dimen/measure_10dp"
+        android:layout_marginTop="@dimen/dim_20dp"
         android:textColor="@color/colorWhite"/>
 
-    <ImageView
-        android:id="@+id/madmove_icon"
-        android:layout_width="216dp"
-        android:layout_height="@dimen/measure_86dp"
-        android:layout_marginTop="@dimen/measure_86dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/splash_background"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_tv" />
 
     <TextView
         android:id="@+id/bottom_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/bottom_3"
-        android:layout_marginBottom="@dimen/measure_20dp"
+        android:layout_marginBottom="@dimen/dim_30dp"
         android:textSize="@dimen/measure_14sp"
         android:textColor="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>

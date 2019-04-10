@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.madmovegame.R;
@@ -20,10 +21,9 @@ import com.example.madmovegame.utility.MadMoveUtils;
  */
 public class LoginFragment extends Fragment implements View.OnClickListener {
     public static final String TAG = "Login Fragment";
-    private TextInputEditText mobileNumberTIEditText, passwordTIEditText;
+    private EditText mobileNumberTIEditText, passwordTIEditText;
     private TextView forgetPasswordTV, createAccountTV;
     private Button loginButton;
-    private TextInputLayout mobileNoTILayout,passwordTILayout;
 
     LoginFragmentListeners loginFragmentListeners;
 
@@ -54,13 +54,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         forgetPasswordTV = view.findViewById(R.id.forget_password_tv);
         createAccountTV = view.findViewById(R.id.create_account_tv);
 
-        mobileNoTILayout = view.findViewById(R.id.mobile_number_TILayout);
-        passwordTILayout = view.findViewById(R.id.password_TILayout);
-
         MadMoveUtils.setAnimation(getActivity(),R.anim.right_to_left,forgetPasswordTV);
 
-        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,mobileNoTILayout);
-        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,passwordTILayout);
+        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,mobileNumberTIEditText);
+        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,passwordTIEditText);
 
         loginButton = view.findViewById(R.id.login_button);
 

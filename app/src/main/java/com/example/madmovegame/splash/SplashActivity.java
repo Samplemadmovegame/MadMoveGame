@@ -23,20 +23,14 @@ public class SplashActivity extends AppCompatActivity {
 
         MadMoveUtils.setAnimation(this,R.anim.top_to_bottom,topImageView);
 
-        MadMoveUtils.setAnimation(this,R.anim.bottom_to_top,bottomImageView);
+       MadMoveUtils.setAnimation(this,R.anim.bottom_to_top,bottomImageView);
 
-        //For Splash Screen Time Out
+       // For Splash Screen Time Out
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
-                //For New User
                 startActivity(new Intent(SplashActivity.this, IntroductionActivity.class));
-
-                //For Existing User
-               // startActivity(new Intent(SplashActivity.this,LoginActivity.class));
-
             }
         },2000);
-    }
+   }
 }

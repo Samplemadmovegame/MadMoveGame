@@ -49,11 +49,11 @@ public class AuthenticationFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-               getActivity().getSupportFragmentManager().beginTransaction()
-                       .setCustomAnimations(R.anim.bottom_to_top,0,0,0)
-                       .replace(R.id.container_view,RegisterFragment.newInstance())
-                       .addToBackStack(null)
-                       .commit();
+//               getActivity().getSupportFragmentManager().beginTransaction()
+//                       .setCustomAnimations(R.anim.bottom_to_top,0,0,0)
+//                       .replace(R.id.container_view,RegisterFragment.newInstance())
+//                       .addToBackStack(null)
+//                       .commit();
 
             }
         });
