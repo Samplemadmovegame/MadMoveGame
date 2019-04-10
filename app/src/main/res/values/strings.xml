@@ -19,7 +19,7 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="password">Password</string>
     <string name="forget_password">Forget Password?</string>
-    <string name="no_account_create">Don\'t have an Account?</string>
+    <string name="no_account_create">Don\'t have an Account? </string>
     <string name="create_account">Create Account</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -28,8 +28,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="Rs">Rs</string>
-    <string name="home">home</string>
+    <string name="Rs">\u20B9</string>
+    <string name="home">Home</string>
     <string name="matches">Matches</string>
     <string name="feed">Feed</string>
     <string name="more">More</string>

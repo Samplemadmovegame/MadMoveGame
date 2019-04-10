@@ -15,18 +15,19 @@
         android:gravity="center"
         android:text="Mega Contest"
         android:textSize="@dimen/dim_18sp"
-        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/contest_des"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_30dp"
+        android:layout_height="@dimen/dim_20dp"
         android:layout_marginBottom="@dimen/dim_10dp"
         android:gravity="center"
         android:text="Get Ready for mega winning !"
         android:textSize="@dimen/dim_10sp"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/contest_name" />
 
 
@@ -50,6 +51,7 @@
                 android:text="Prize Pool"
                 android:textSize="@dimen/dim_10sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -58,6 +60,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/dim_17sp"
                 android:textStyle="bold"
+                android:text="@string/Rs"
+                android:layout_marginLeft="@dimen/dim_20dp"
+                android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/prize_pool" />
 
@@ -67,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dim_5dp"
                 android:text="8000"
+                android:textColor="@color/black"
                 android:textSize="@dimen/dim_17sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/currency_symbol"
@@ -77,7 +83,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dim_5dp"
-                android:text="Coroes"
+                android:text="Crores"
+                android:textColor="@color/black"
                 android:textSize="@dimen/dim_17sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toRightOf="@+id/price"
@@ -90,6 +97,7 @@
                 android:layout_height="@dimen/dim_25dp"
                 android:background="@drawable/curve_fill_green_"
                 android:gravity="center"
+                android:layout_marginRight="@dimen/dim_20dp"
                 android:text="49"
                 android:textColor="@color/white"
                 app:layout_constraintRight_toRightOf="parent"
@@ -141,17 +149,19 @@
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dim_40dp"
+                android:layout_height="@dimen/dim_35dp"
                 android:layout_marginTop="@dimen/dim_10dp"
                 android:background="@drawable/curve_fill_gray"
+                android:paddingTop="@dimen/dim_5dp"
+                android:paddingBottom="@dimen/dim_5dp"
                 app:layout_constraintTop_toBottomOf="@id/spots_left">
 
                 <ImageView
                     android:id="@+id/cup_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/dim_5dp"
-                    android:background="@drawable/ic_menu_gallery"
+                    android:layout_width="@dimen/dim_20dp"
+                    android:layout_height="@dimen/dim_20dp"
+                    android:layout_marginRight="@dimen/dim_7dp"
+                    android:background="@drawable/winning_cup_color"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -162,8 +172,9 @@
                     android:id="@+id/winning_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/dim_5dp"
-                    android:text="14,989,000"
+                    android:layout_marginRight="@dimen/dim_7dp"
+                    android:text="14,989,000 "
+                    android:textColor="@color/colorPrimary"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@+id/cup_img"
                     app:layout_constraintRight_toLeftOf="@+id/text"
@@ -175,7 +186,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/dim_10dp"
-                    android:text="inner"
+                    android:text="inners "
+                    android:textColor="@color/colorPrimary"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@+id/winning_price"
                     app:layout_constraintRight_toLeftOf="@+id/drop_down_img"
@@ -189,6 +201,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toRightOf="@+id/text"
                     app:layout_constraintRight_toRightOf="parent"
+                    android:visibility="gone"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </android.support.constraint.ConstraintLayout>

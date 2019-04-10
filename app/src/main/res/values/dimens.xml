@@ -46,6 +46,8 @@
     <dimen name="measure_18sp">18sp</dimen>
     <dimen name="dim_35dp">35dp</dimen>
     <dimen name="dim_140dp">140dp</dimen>
+    <dimen name="dim_160dp">160dp</dimen>
+    <dimen name="dim_7dp">7dp</dimen>
 
     <integer name="slide_animation_duration">300</integer>
 

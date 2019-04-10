@@ -6,5 +6,5 @@
     <item android:id="@+id/wallet"
         app:showAsAction="always"
         android:title="setting"
-        android:icon="@mipmap/ic_launcher"/>
+        android:icon="@drawable/my_bal_icon"/>
 </menu>

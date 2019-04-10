@@ -8,21 +8,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
 
         <activity
             android:name=".team.TeamActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/FullscreenTheme"></activity>
         <activity
             android:name=".payment.PaymentActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".contest.ContestActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/FullscreenTheme">
 
         </activity>
 

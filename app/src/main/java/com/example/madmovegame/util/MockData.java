@@ -37,9 +37,15 @@ public class MockData {
 
     public static List<Team> getTeamInfo() {
         List<Team> list = new ArrayList<>();
-        list.add(new Team("M Dhoni","87.5","8.0"));
-        list.add(new Team("M Dhoni","87.5","8.0"));
-        list.add(new Team("M Dhoni","87.5","8.0"));
+        list.add(new Team(Const.DHONI, "87.5", "8.0"));
+        list.add(new Team(Const.YADAV, "87.5", "8.0"));
+        list.add(new Team(Const.POLLARD, "87.5", "8.0"));
+        list.add(new Team(Const.KARTIK, "87.5", "8.0"));
+        list.add(new Team(Const.MALINGA, "87.5", "8.0"));
+        list.add(new Team(Const.QUINTON, "87.5", "8.0"));
+        list.add(new Team(Const.WATSON, "87.5", "8.0"));
+        list.add(new Team(Const.ROHIT, "87.5", "8.0"));
+        list.add(new Team(Const.JADEJA, "87.5", "8.0"));
         return list;
     }
 }

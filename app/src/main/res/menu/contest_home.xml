@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/action_settings"
-        app:showAsAction="always"
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/notification_icon"
         android:title="setting"
-        android:icon="@mipmap/ic_launcher"/>
+        app:showAsAction="always" />
 </menu>

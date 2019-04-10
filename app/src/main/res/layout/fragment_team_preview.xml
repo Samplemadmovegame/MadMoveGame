@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
     tools:context=".team.TeamPreview">
 
     <ImageView
         android:id="@+id/app_img"
-        android:layout_width="@dimen/dim_60dp"
-        android:layout_height="@dimen/dim_60dp"
-        android:background="@drawable/ic_menu_camera"
+        android:layout_width="@dimen/dim_200dp"
+        android:layout_height="@dimen/dim_50dp"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:background="@drawable/mad_move_logo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/close_bt"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,6 +24,7 @@
         android:background="@drawable/ic_menu_camera"
         android:gravity="center"
         android:text="POINTS"
+        android:visibility="gone"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,9 +37,9 @@
         <ImageView
             android:id="@+id/p1_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/dhoni_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -44,49 +47,75 @@
         <TextView
             android:id="@+id/p1_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DHONI"
+            android:layout_height="@dimen/dim_20dp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:textColor="@color/white"
+            android:text="M DHONI"
+            android:textSize="@dimen/dim_8sp"
+            android:background="@drawable/curve_fill_orange"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            android:padding="@dimen/dim_5dp"
             app:layout_constraintTop_toBottomOf="@+id/p1_img" />
 
 
         <TextView
             android:id="@+id/p2_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:textSize="@dimen/dim_8sp"
+            android:text="YUVRAJ"
+            android:padding="@dimen/dim_5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_fill_orange"
+            android:layout_marginTop="@dimen/dim_10sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/p3_name"
             app:layout_constraintTop_toBottomOf="@+id/p2_img" />
 
         <TextView
             android:id="@+id/p3_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+
+            android:text="POLLARD"
+            android:textSize="@dimen/dim_8sp"
+            android:background="@drawable/curve_fill_blue"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:padding="@dimen/dim_5dp"
             app:layout_constraintLeft_toRightOf="@+id/p2_name"
             app:layout_constraintRight_toLeftOf="@+id/p4_name"
             app:layout_constraintTop_toBottomOf="@+id/p2_img" />
 
         <TextView
             android:id="@+id/p4_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:layout_height="@dimen/dim_20dp"
+            android:textSize="@dimen/dim_8sp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="JADEJA"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_fill_orange"
+            android:padding="@dimen/dim_5dp"
             app:layout_constraintLeft_toRightOf="@+id/p3_name"
             app:layout_constraintRight_toLeftOf="@+id/p5_name"
             app:layout_constraintTop_toBottomOf="@+id/p2_img" />
 
         <TextView
             android:id="@+id/p5_name"
-            android:layout_width="@dimen/dim_60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="QUINTON"
+            android:textSize="@dimen/dim_8sp"
+            android:background="@drawable/curve_fill_blue"
+            android:padding="@dimen/dim_5dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dim_10dp"
             app:layout_constraintLeft_toRightOf="@+id/p4_name"
             app:layout_constraintRight_toLeftOf="@+id/p6_name"
             app:layout_constraintTop_toBottomOf="@+id/p2_img" />
@@ -97,18 +126,23 @@
             android:layout_width="@dimen/dim_60dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="ROHIT"
             app:layout_constraintLeft_toRightOf="@+id/p5_name"
             app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_fill_orange"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:textSize="@dimen/dim_8sp"
+            android:padding="@dimen/dim_5dp"
             app:layout_constraintTop_toBottomOf="@+id/p2_img" />
 
 
         <ImageView
             android:id="@+id/p2_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/yuvraj_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/p3_img"
             app:layout_constraintTop_toBottomOf="@+id/p1_name" />
@@ -116,9 +150,9 @@
         <ImageView
             android:id="@+id/p3_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/pollard_img"
             app:layout_constraintLeft_toRightOf="@+id/p2_img"
             app:layout_constraintRight_toLeftOf="@+id/p4_img"
             app:layout_constraintTop_toBottomOf="@+id/p1_name" />
@@ -126,9 +160,9 @@
         <ImageView
             android:id="@+id/p4_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/jadeja_img"
             app:layout_constraintLeft_toRightOf="@+id/p3_img"
             app:layout_constraintRight_toLeftOf="@+id/p5_img"
             app:layout_constraintTop_toBottomOf="@+id/p1_name" />
@@ -136,9 +170,9 @@
         <ImageView
             android:id="@+id/p5_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/quinton_img"
             app:layout_constraintLeft_toRightOf="@+id/p4_img"
             app:layout_constraintRight_toLeftOf="@+id/p6_img"
             app:layout_constraintTop_toBottomOf="@+id/p1_name" />
@@ -147,30 +181,35 @@
         <ImageView
             android:id="@+id/p6_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
-            app:layout_constraintLeft_toRightOf="@+id/p5_img"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/rohit_sharma_img"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p1_name" />
+            app:layout_constraintLeft_toRightOf="@id/p5_img"
+           app:layout_constraintTop_toBottomOf="@+id/p1_name" />
 
 
         <ImageView
             android:id="@+id/p7_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/kartik_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p2_name" />
 
         <TextView
             android:id="@+id/p7_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
+            android:textSize="@dimen/dim_8sp"
+            android:padding="@dimen/dim_5dp"
+            android:background="@drawable/curve_fill_orange"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dim_10dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="KARTIK"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p7_img" />
@@ -179,27 +218,27 @@
         <ImageView
             android:id="@+id/p8_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/s_watson_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p7_name" />
 
         <ImageView
             android:id="@+id/p9_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/chawla_img"
             app:layout_constraintLeft_toRightOf="@+id/p8_img"
             app:layout_constraintTop_toBottomOf="@+id/p7_name" />
 
         <ImageView
             android:id="@+id/p10_img"
             android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_height="@dimen/dim_60dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/s_raina_img"
             app:layout_constraintRight_toLeftOf="@+id/p11_img"
             app:layout_constraintTop_toBottomOf="@+id/p7_name" />
 
@@ -208,44 +247,65 @@
             android:layout_width="@dimen/dim_50dp"
             android:layout_height="@dimen/dim_50dp"
             android:layout_marginTop="@dimen/dim_40dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/yadav_img"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p7_name" />
+            app:layout_constraintTop_toBottomOf="@+id/p7_name"
+            />
 
         <TextView
             android:id="@+id/p8_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="WATSON"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim_8sp"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:background="@drawable/curve_fill_blue"
+            android:padding="@dimen/dim_5dp"
+
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p8_img" />
 
 
         <TextView
             android:id="@+id/p9_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="CHAWLA"
+            android:background="@drawable/curve_fill_orange"
+            android:textSize="@dimen/dim_8sp"
+            android:padding="@dimen/dim_5dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dim_10dp"
             app:layout_constraintLeft_toRightOf="@+id/p8_name"
             app:layout_constraintTop_toBottomOf="@+id/p8_img" />
 
         <TextView
             android:id="@+id/p10_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="RAINA"
+            android:padding="@dimen/dim_5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_fill_blue"
+            android:layout_marginTop="@dimen/dim_10dp"
             app:layout_constraintRight_toLeftOf="@+id/p11_name"
             app:layout_constraintTop_toBottomOf="@+id/p8_img" />
 
         <TextView
             android:id="@+id/p11_name"
-            android:layout_width="@dimen/dim_60dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_20dp"
             android:gravity="center_horizontal"
-            android:text="DHONI"
+            android:text="YADAV"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_fill_orange"
+            android:layout_marginTop="@dimen/dim_10dp"
+            android:padding="@dimen/dim_5dp"
+            android:textSize="@dimen/dim_8sp"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p8_img" />
 
@@ -265,6 +325,7 @@
             android:layout_width="@dimen/dim_120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
             android:layout_margin="@dimen/dim_10dp"
             android:background="@drawable/curve_outline"
             android:text="CONTINUE"

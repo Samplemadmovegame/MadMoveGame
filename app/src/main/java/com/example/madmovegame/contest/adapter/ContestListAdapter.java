@@ -54,7 +54,7 @@ public class ContestListAdapter extends RecyclerView.Adapter<ContestListAdapter.
         contestViewHolder.spotsLeft.setText(contest.getLeftspot()+" Spots Lefts");
         contestViewHolder.totalSpots.setText(contest.getTotalSpot()+" Spots");
         contestViewHolder.entryPrice.setText(mContext.getResources().getString(R.string.Rs)+" "+contest.getEntryPrice());
-        contestViewHolder.winnigPrice.setText(contest.getWinnigPrice());
+      //  contestViewHolder.winnigPrice.setText(contest.getWinnigPrice());
 
         Log.v("*1--",contest.getContestName());
 

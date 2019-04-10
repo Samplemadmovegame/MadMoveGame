@@ -16,6 +16,7 @@ import android.widget.Button;
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.adapter.ContestListAdapter;
 import com.example.madmovegame.contest.model.Contest;
+import com.example.madmovegame.home.model.AllSports;
 
 
 public class ContestFrag extends Fragment {

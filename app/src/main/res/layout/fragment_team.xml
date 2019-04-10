@@ -16,11 +16,11 @@
 
         <ImageView
             android:id="@+id/back_bt"
-            android:layout_width="@dimen/dim_50dp"
-            android:layout_height="@dimen/dim_50dp"
+            android:layout_width="@dimen/dim_15dp"
+            android:layout_height="@dimen/dim_15dp"
             android:layout_marginLeft="@dimen/dim_20dp"
             android:layout_marginTop="@dimen/dim_20dp"
-            android:background="@drawable/ic_menu_camera"
+            android:background="@drawable/back_button_icon"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,13 +28,13 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
-            android:layout_height="41dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim_20dp"
-            android:gravity="center"
-            android:text="Create team"
+            android:gravity="top"
+            android:text="Create Team"
             android:textColor="@color/white"
             android:textSize="18sp"
-            app:layout_constraintLeft_toRightOf="@+id/back_bt"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -140,7 +140,6 @@
             android:layout_width="@dimen/dim_50dp"
             android:layout_height="@dimen/dim_50dp"
             android:layout_marginLeft="@dimen/dim_30dp"
-            android:background="@drawable/ic_menu_camera"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -150,6 +149,7 @@
             android:layout_height="@dimen/dim_50dp"
             android:gravity="center"
             android:text="MI"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dim_20sp"
             app:layout_constraintLeft_toRightOf="@+id/team1_img"
             app:layout_constraintTop_toTopOf="parent" />
@@ -158,7 +158,6 @@
             android:id="@+id/team1_circle_img"
             android:layout_width="@dimen/dim_50dp"
             android:layout_height="@dimen/dim_50dp"
-            android:background="@drawable/ic_menu_camera"
             app:layout_constraintLeft_toRightOf="@+id/team1_name"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -168,7 +167,6 @@
             android:layout_height="@dimen/dim_50dp"
             android:layout_marginLeft="@dimen/dim_50dp"
             android:layout_marginRight="@dimen/dim_20dp"
-            android:background="@drawable/ic_menu_camera"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -178,6 +176,7 @@
             android:layout_height="@dimen/dim_50dp"
             android:gravity="center"
             android:text="CSK"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dim_20sp"
             app:layout_constraintRight_toLeftOf="@+id/team2_img"
             app:layout_constraintTop_toTopOf="parent" />
@@ -186,7 +185,6 @@
             android:id="@+id/team2_circle_img"
             android:layout_width="@dimen/dim_50dp"
             android:layout_height="@dimen/dim_50dp"
-            android:background="@drawable/ic_menu_camera"
             app:layout_constraintRight_toLeftOf="@+id/team2_name"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -198,7 +196,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_50dp"
+        android:layout_height="@dimen/dim_35dp"
         android:background="@color/gray"
         android:paddingLeft="@dimen/dim_20dp"
         android:paddingRight="@dimen/dim_20dp"
@@ -280,6 +278,7 @@
             android:layout_marginRight="@dimen/dim_30dp"
             android:background="@drawable/curve_outline"
             android:text="TEAM PREVIEW"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dim_12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -296,6 +295,7 @@
             android:layout_marginRight="@dimen/dim_30dp"
             android:background="@drawable/curve_outline"
             android:text="CONTINUE"
+            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dim_12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/team_preview_bt"

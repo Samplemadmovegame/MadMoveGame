@@ -46,7 +46,7 @@
                 android:id="@+id/team1_image"
                 android:layout_width="@dimen/dim_40dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_menu_camera"
+                android:layout_marginLeft="@dimen/dim_20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -57,7 +57,8 @@
                 android:layout_marginLeft="@dimen/dim_10dp"
                 android:gravity="center_vertical"
                 android:text="CSK"
-                android:textSize="@dimen/dim_10sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dim_15sp"
                 app:layout_constraintLeft_toRightOf="@+id/team1_image" />
 
 
@@ -65,8 +66,8 @@
                 android:id="@+id/team2_image"
                 android:layout_width="@dimen/dim_40dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_menu_camera"
                 app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="@dimen/dim_20dp"
                 app:layout_constraintRight_toRightOf="parent" />
 
             <TextView
@@ -77,18 +78,20 @@
                 android:gravity="center_vertical"
                 android:text="CSK"
                 android:layout_marginRight="@dimen/dim_10dp"
-                android:textSize="@dimen/dim_10sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dim_15sp"
                 app:layout_constraintRight_toLeftOf="@+id/team2_image" />
 
             <TextView
                 android:layout_width="@dimen/dim_100dp"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/dim_25dp"
                 android:layout_margin="3dp"
                 android:background="@drawable/curve_outline"
                 android:gravity="center"
                 android:text="4 h 11 m left"
                 android:textColor="@color/red"
                 android:textSize="@dimen/dim_8sp"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/team1_name"
                 app:layout_constraintRight_toLeftOf="@+id/team2_name" />

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.home.model.Sport;
@@ -55,6 +57,122 @@ public class AllSportsListAdapter extends RecyclerView.Adapter<AllSportsListAdap
         //sportsViewHolder.timeleft.setText(sport.getTimeleft() + "");
         sportsViewHolder.leagueName.setText(sport.getLeagueName());
 
+
+        switch (sport.getTeam1()) {
+
+            case Const.CSK:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.csk_icon))
+                        .into(sportsViewHolder.tema1Img);
+                break;
+
+
+            case Const.MI:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.mi_icon))
+                        .into(sportsViewHolder.tema1Img);
+                break;
+
+
+            case Const.KKR:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.kkr_icon))
+                        .into(sportsViewHolder.tema1Img);
+                break;
+
+
+            case Const.PUNE:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.pune_icon))
+                        .into(sportsViewHolder.tema1Img);
+
+                break;
+
+
+            case Const.HYD:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.hyd_icon))
+                        .into(sportsViewHolder.tema1Img);
+
+                break;
+
+
+            case Const.RCB:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.rcb_icon))
+                        .into(sportsViewHolder.tema1Img);
+
+                break;
+
+
+        }
+
+        switch (sport.getTeam2()) {
+
+            case Const
+                    .CSK:
+
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.csk_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+            case Const
+                    .MI:
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.mi_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+            case Const
+                    .KKR:
+
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.kkr_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+            case Const
+                    .PUNE:
+
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.pune_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+            case Const
+                    .HYD:
+
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.hyd_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+            case Const
+                    .RCB:
+
+                Glide
+                        .with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.rcb_icon))
+                        .into(sportsViewHolder.team2Img);
+                break;
+
+
+        }
     }
 
     @Override

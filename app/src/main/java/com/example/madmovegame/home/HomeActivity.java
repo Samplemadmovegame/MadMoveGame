@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -50,7 +51,7 @@ public class HomeActivity extends AppCompatActivity
         });
 
         //@TODO
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu_camera));
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.circle_backgroud));
 
         getSupportFragmentManager().beginTransaction().add(R.id.container, HomeFrag.newInstance()).commit();
     }

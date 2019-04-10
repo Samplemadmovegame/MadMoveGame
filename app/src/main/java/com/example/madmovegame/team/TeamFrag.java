@@ -12,17 +12,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
+import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.team.adapter.TeamListAdapter;
 
 
 public class TeamFrag extends Fragment {
 
     public static final String TAG = "TeamFrag";
+    public static final String PARAM = "param";
     private RecyclerView mTeamRecyclerView;
     private TeamListAdapter mTeamListAdapter;
     private Button teamPreviewBt;
+    private ImageView team1Img, team2Img;
+    private TextView team1Name, team2Name;
+    private AllSports sport;
+    private Context mContext;
+
+
 
     private OnTeamFragmentInteractionListener mListener;
 
@@ -39,9 +51,19 @@ public class TeamFrag extends Fragment {
         return fragment;
     }
 
+    public static TeamFrag newInstance(AllSports sports) {
+        Bundle args = new Bundle();
+        args.putParcelable(PARAM,sports);
+        TeamFrag fragment = new TeamFrag();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sport=getArguments().getParcelable(PARAM);
+        mContext=getActivity();
 
     }
 
@@ -58,7 +80,125 @@ public class TeamFrag extends Fragment {
                 mListener.onclickTeamPreview();
             }
         });
+
+        team1Img = view.findViewById(R.id.team1_img);
+        team2Img = view.findViewById(R.id.team2_img);
+        team1Name = view.findViewById(R.id.team1_name);
+        team2Name = view.findViewById(R.id.team2_name);
+        setTeam1Image();
+        setTeam2Image();
+        team1Name.setText(sport.getTeam1());
+        team2Name.setText(sport.getTeam2());
         return view;
+    }
+
+
+    private void setTeam1Image() {
+
+        switch (sport.getTeam1()) {
+
+            case Const.CSK:
+                Glide.with(this)
+                        .load(mContext.getResources().getDrawable(R.drawable.csk_icon))
+                        .into(team1Img);
+                break;
+
+
+            case Const.MI:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.mi_icon))
+                        .into(team1Img);
+                break;
+
+
+            case Const.KKR:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.kkr_icon))
+                        .into(team1Img);
+                break;
+
+
+            case Const.PUNE:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.pune_icon))
+                        .into(team1Img);
+
+                break;
+
+
+            case Const.HYD:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.hyd_icon))
+                        .into(team1Img);
+
+                break;
+
+
+            case Const.RCB:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.rcb_icon))
+                        .into(team1Img);
+
+                break;
+        }
+    }
+
+    private void setTeam2Image() {
+
+        switch (sport.getTeam2()) {
+
+            case Const.CSK:
+                Glide.with(this)
+                        .load(mContext.getResources().getDrawable(R.drawable.csk_icon))
+                        .into(team2Img);
+                break;
+
+
+            case Const.MI:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.mi_icon))
+                        .into(team2Img);
+                break;
+
+
+            case Const.KKR:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.kkr_icon))
+                        .into(team2Img);
+                break;
+
+
+            case Const.PUNE:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.pune_icon))
+                        .into(team2Img);
+
+                break;
+
+
+            case Const.HYD:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.hyd_icon))
+                        .into(team2Img);
+
+                break;
+
+
+            case Const.RCB:
+
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.rcb_icon))
+                        .into(team2Img);
+
+                break;
+        }
     }
 
     @Override

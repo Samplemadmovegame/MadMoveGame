@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.payment.model.Payment;
@@ -48,10 +49,69 @@ public class TeamListAdapter extends RecyclerView.Adapter<TeamListAdapter.TeamLi
 
         switch (team.getPalyerName()) {
 
-            case "M Dhoni":
+            case Const.DHONI:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.dhoni_img))
+                        .into(rankListViewHolder.playerImg);
                 break;
 
+            case Const.YADAV:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.yadav_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.YUVRAJ:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.yuvraj_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.POLLARD:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.pollard_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.KARTIK:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.kartik_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.RAINA:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.s_raina_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.ROHIT:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.rohit_sharma_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.QUINTON:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.quinton_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.CHAWLA:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.chawla_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
+
+            case Const.MALINGA:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.malinga_img))
+                        .into(rankListViewHolder.playerImg);
+                break;
             default:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.dhoni_img))
+                        .into(rankListViewHolder.playerImg);
                 break;
         }
 

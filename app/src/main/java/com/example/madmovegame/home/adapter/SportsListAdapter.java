@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.home.model.Sport;
 import com.example.madmovegame.util.HomeUtil;
@@ -51,7 +52,34 @@ public class SportsListAdapter extends RecyclerView.Adapter<SportsListAdapter.Sp
         });
 
         sportsViewHolder.sportsName.setText(sport.getName());
-        Log.v("*1--",sport.getName());
+
+        switch (sport.getName()) {
+
+            case Const.CRICKET:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.cricket_icon_fill));
+                break;
+
+            case Const.HOCKEY:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.hockey_fill_icon));
+                break;
+
+            case Const.BASEBALL:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.baseball_fill_icon));
+                break;
+
+            case Const.FOOTBALL:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.foodball_icon_fill));
+                break;
+
+            case Const.BADMINTON:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.badmintion_fill_icon));
+                break;
+
+            case Const.BASKETBALL:
+                sportsViewHolder.sportsImage.setBackground(mContext.getResources().getDrawable(R.drawable.basketball_fill_icon));
+                break;
+        }
+
 
     }
 
