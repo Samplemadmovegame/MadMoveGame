@@ -19,6 +19,7 @@
     <ImageView
         android:id="@+id/bottom_imageView"
         android:layout_width="match_parent"
+        android:alpha="0.3"
         android:layout_height="match_parent"
         android:background="@drawable/splash_image"/>
 

@@ -13,9 +13,7 @@ public class AppAnimationUtil {
      * @param desiredAnimation
      */
     public static void setAnimation(Context context, int desiredAnimation, View view) {
-
         Animation animation = AnimationUtils.loadAnimation(context,desiredAnimation);
-
         view.startAnimation(animation);
     }
 

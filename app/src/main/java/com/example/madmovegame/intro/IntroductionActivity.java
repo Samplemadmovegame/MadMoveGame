@@ -22,6 +22,7 @@ public class IntroductionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_introduction);
 
         introductionViewPager = findViewById(R.id.introduction_viewpager);
+        introductionViewPager.setPageTransformer(false,new FadePageTransformer());
         skipButton = findViewById(R.id.skip_button);
 
         setUpViewAdapter();
@@ -40,7 +41,6 @@ public class IntroductionActivity extends AppCompatActivity {
     public void setUpViewAdapter(){
 
         IntroViewPagerAdapter introViewPagerAdapter = new IntroViewPagerAdapter(getSupportFragmentManager());
-
         introViewPagerAdapter.addFragment(IntroFragment1.newInstance());
         introViewPagerAdapter.addFragment(IntroFragment2.newInstance());
         introViewPagerAdapter.addFragment(IntroFragment3.newInstance());

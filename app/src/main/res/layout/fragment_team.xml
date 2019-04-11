@@ -257,6 +257,7 @@
         android:id="@+id/team_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_0dp"
+        android:layoutAnimation="@anim/layout_animation_from_bottom"
         app:layout_constraintTop_toBottomOf="@+id/layout1"
         tools:layout_editor_absoluteY="50dp">
 

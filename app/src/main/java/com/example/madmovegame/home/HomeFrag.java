@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
+import android.widget.TextView;
 
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.ContestActivity;
@@ -19,6 +20,7 @@ import com.example.madmovegame.home.adapter.AllSportsListAdapter;
 import com.example.madmovegame.home.adapter.SportsListAdapter;
 import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.util.HomeUtil;
+import com.example.madmovegame.utility.AppAnimationUtil;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,7 @@ public class HomeFrag extends Fragment {
     private SportsListAdapter mSportsListAdapter;
     private AllSportsListAdapter mAllSportsListAdapter;
     private RecyclerView sportRecyclerView, allSportsRecyclerView;
+    private TextView updateText;
 
 
     public HomeFrag() {
@@ -53,6 +56,10 @@ public class HomeFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         allSportsRecyclerView = view.findViewById(R.id.all_sports_recycler_view);
         sportRecyclerView = view.findViewById(R.id.sport_recycler_view);
+        updateText = view.findViewById(R.id.text);
+
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,updateText);
+
         setUpSportsAdapter();
         setUpAllSportsAdapter();
         return view;

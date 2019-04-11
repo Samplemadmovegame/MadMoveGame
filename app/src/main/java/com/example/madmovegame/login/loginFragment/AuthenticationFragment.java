@@ -1,8 +1,13 @@
 package com.example.madmovegame.login.loginFragment;
 
 
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +22,6 @@ import com.example.madmovegame.utility.AppAnimationUtil;
 public class AuthenticationFragment extends Fragment {
 
     private Button registerButton,loginButton;
-
 
     public AuthenticationFragment() {
         // Required empty public constructor
@@ -42,8 +46,8 @@ public class AuthenticationFragment extends Fragment {
         registerButton = view.findViewById(R.id.register_button);
         loginButton = view.findViewById(R.id.login_button);
 
-       AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,registerButton);
-       AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,loginButton);
+       AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,registerButton);
+       AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,loginButton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,5 +77,6 @@ public class AuthenticationFragment extends Fragment {
 
         return view;
     }
+
 
 }

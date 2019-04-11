@@ -21,7 +21,6 @@ public class IntroFragment1 extends Fragment {
     public static IntroFragment1 newInstance() {
 
         Bundle args = new Bundle();
-
         IntroFragment1 fragment = new IntroFragment1();
         fragment.setArguments(args);
         return fragment;
