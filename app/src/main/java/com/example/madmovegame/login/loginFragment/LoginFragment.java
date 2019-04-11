@@ -3,8 +3,6 @@ package com.example.madmovegame.login.loginFragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.madmovegame.R;
-import com.example.madmovegame.utility.MadMoveUtils;
+import com.example.madmovegame.utility.AppAnimationUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,10 +52,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         forgetPasswordTV = view.findViewById(R.id.forget_password_tv);
         createAccountTV = view.findViewById(R.id.create_account_tv);
 
-        MadMoveUtils.setAnimation(getActivity(),R.anim.right_to_left,forgetPasswordTV);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,forgetPasswordTV);
 
-        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,mobileNumberTIEditText);
-        MadMoveUtils.setAnimation(getActivity(),R.anim.left_to_right,passwordTIEditText);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,mobileNumberTIEditText);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,passwordTIEditText);
 
         loginButton = view.findViewById(R.id.login_button);
 
@@ -72,13 +70,12 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
 
         switch (view.getId()) {
-
             case R.id.forget_password_tv:
-                loginFragmentListeners.openForgetPasswordFragment();
+              //  loginFragmentListeners.openForgetPasswordFragment();
                 break;
 
             case R.id.create_account_tv:
-                loginFragmentListeners.openCreateAccountFragment();
+             //   loginFragmentListeners.openCreateAccountFragment();
                 break;
 
             case R.id.login_button:

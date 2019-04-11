@@ -26,6 +26,7 @@
     <ImageView
         android:id="@+id/logo_img"
         android:layout_width="match_parent"
+        android:transitionName="logo"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dim_50dp"
         android:layout_marginRight="@dimen/dim_50dp"

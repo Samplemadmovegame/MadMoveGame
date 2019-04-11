@@ -29,7 +29,7 @@ public class TeamFrag extends Fragment {
     private RecyclerView mTeamRecyclerView;
     private TeamListAdapter mTeamListAdapter;
     private Button teamPreviewBt;
-    private ImageView team1Img, team2Img;
+    private ImageView team1Img, team2Img,backBt;
     private TextView team1Name, team2Name;
     private AllSports sport;
     private Context mContext;
@@ -73,6 +73,13 @@ public class TeamFrag extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_team, container, false);
         mTeamRecyclerView = view.findViewById(R.id.team_recycler_view);
+        backBt = view.findViewById(R.id.back_bt);
+        backBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
         teamPreviewBt = view.findViewById(R.id.team_preview_bt);
         teamPreviewBt.setOnClickListener(new View.OnClickListener() {
             @Override

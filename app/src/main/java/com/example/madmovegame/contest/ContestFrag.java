@@ -73,9 +73,8 @@ public class ContestFrag extends Fragment {
         mContestListAdapter = new ContestListAdapter(getActivity(), new ContestListAdapter.ContestListAdapterListener() {
             @Override
             public void onItemClick(Contest contest) {
-                mListener.openContestInfo(contest);
+               mListener.openContestInfo(contest);
 
-                Log.v("*1--","ckick");
             }
         });
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());

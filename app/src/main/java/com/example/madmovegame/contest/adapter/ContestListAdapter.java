@@ -42,7 +42,7 @@ public class ContestListAdapter extends RecyclerView.Adapter<ContestListAdapter.
     @Override
     public void onBindViewHolder(@NonNull ContestViewHolder contestViewHolder, int i) {
         final Contest contest = contestList.get(i);
-      contestViewHolder.view.setOnClickListener(new View.OnClickListener() {
+      contestViewHolder.entryPrice.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               mListener.onItemClick(contest);

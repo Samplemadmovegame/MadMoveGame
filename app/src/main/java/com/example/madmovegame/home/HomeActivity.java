@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity
         });
 
         //@TODO
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.circle_backgroud));
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.profile_circle_backgroud));
 
         getSupportFragmentManager().beginTransaction().add(R.id.container, HomeFrag.newInstance()).commit();
     }

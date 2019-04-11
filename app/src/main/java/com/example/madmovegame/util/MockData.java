@@ -20,8 +20,8 @@ public class MockData {
 
     public static List<RankInfo> getRankInfo() {
         List<RankInfo> list = new ArrayList<>();
-        list.add(new RankInfo("#1", "DEW", "2000000"));
-        list.add(new RankInfo("#2", "AAYU", "8900000"));
+        list.add(new RankInfo("#1", "", "20000"));
+        list.add(new RankInfo("#2", "- 49,880", "20"));
         return list;
     }
 

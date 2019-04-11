@@ -48,6 +48,9 @@
     <dimen name="dim_140dp">140dp</dimen>
     <dimen name="dim_160dp">160dp</dimen>
     <dimen name="dim_7dp">7dp</dimen>
+    <dimen name="dim_30sp">30sp</dimen>
+    <dimen name="dim_170dp">170dp</dimen>
+    <dimen name="dim_9dp">9dp</dimen>
 
     <integer name="slide_animation_duration">300</integer>
 

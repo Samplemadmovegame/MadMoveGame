@@ -45,7 +45,7 @@ public class RankListAdapter extends RecyclerView.Adapter<RankListAdapter.RankLi
         final RankInfo rankInfo = contestList.get(i);
         rankListViewHolder.rankNo.setText(rankInfo.getRankNo());
         rankListViewHolder.rankName.setText(rankInfo.getName());
-        rankListViewHolder.price.setText(rankInfo.getPrize());
+        rankListViewHolder.price.setText(mContext.getResources().getString(R.string.Rs)+" "+rankInfo.getPrize());
 
     }
 

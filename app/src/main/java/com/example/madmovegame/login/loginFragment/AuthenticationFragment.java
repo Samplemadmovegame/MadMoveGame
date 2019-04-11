@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.madmovegame.R;
-import com.example.madmovegame.utility.MadMoveUtils;
+import com.example.madmovegame.utility.AppAnimationUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -42,8 +42,8 @@ public class AuthenticationFragment extends Fragment {
         registerButton = view.findViewById(R.id.register_button);
         loginButton = view.findViewById(R.id.login_button);
 
-       MadMoveUtils.setAnimation(getActivity(),R.anim.right_to_left,registerButton);
-       MadMoveUtils.setAnimation(getActivity(),R.anim.right_to_left,loginButton);
+       AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,registerButton);
+       AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,loginButton);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override

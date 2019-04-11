@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/back_button_icon"
+        android:width="@dimen/dim_15dp"
+        android:height="@dimen/dim_20dp"/>
+</layer-list>

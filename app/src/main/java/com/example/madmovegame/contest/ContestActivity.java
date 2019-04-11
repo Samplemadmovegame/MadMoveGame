@@ -6,8 +6,10 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,11 +41,15 @@ public class ContestActivity extends AppCompatActivity implements ContestFrag.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.back_button_icon));
-
+        getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.back_button_backgroud));
         getSupportFragmentManager().beginTransaction().add(R.id.container, ContestFrag.newInstance()).commit();
-        //getSupportFragmentManager().beginTransaction().add(R.id.container, ContestInfo.newInstance(new Contest("Mega Contest", "Get Ready For Mega Winner", "21,60,000", "14,98,000", "8 Crores", "49"))).commit();
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         team1Img = findViewById(R.id.team1_image);
         team2Img = findViewById(R.id.team2_image);
@@ -190,7 +196,7 @@ public class ContestActivity extends AppCompatActivity implements ContestFrag.On
 
     @Override
     public void openContestInfo(Contest contest) {
-        getSupportFragmentManager().beginTransaction().add(R.id.container, ContestInfo.newInstance(contest));
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, ContestInfo.newInstance(contest)).commit();
 
     }
 

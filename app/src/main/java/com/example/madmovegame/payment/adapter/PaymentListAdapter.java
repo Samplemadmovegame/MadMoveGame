@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.payment.model.Payment;
@@ -47,15 +48,27 @@ public class PaymentListAdapter extends RecyclerView.Adapter<PaymentListAdapter.
         switch (payment.getPaymentName()) {
 
             case Const.UPI:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.upi_icon))
+                        .into(rankListViewHolder.paymentImg);
                 break;
 
             case Const.WALLET:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.wallet_icon))
+                        .into(rankListViewHolder.paymentImg);
                 break;
 
             case Const.NET_BANKING:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.bank_icon))
+                        .into(rankListViewHolder.paymentImg);
                 break;
 
             case Const.CARD:
+                Glide.with(mContext)
+                        .load(mContext.getResources().getDrawable(R.drawable.card_icon))
+                        .into(rankListViewHolder.paymentImg);
                 break;
         }
 

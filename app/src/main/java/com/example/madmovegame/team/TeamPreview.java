@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.madmovegame.R;
 
@@ -23,6 +24,7 @@ public class TeamPreview extends Fragment {
 
     private OnTeamPreviewFragmentInteractionListener mListener;
     private Button continue_bt;
+    private ImageView closeBt;
 
     public TeamPreview() {
         // Required empty public constructor
@@ -49,10 +51,17 @@ public class TeamPreview extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_team_preview, container, false);
         continue_bt=view.findViewById(R.id.continue_bt);
+        closeBt=view.findViewById(R.id.close_bt);
         continue_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.onClickContinue();
+            }
+        });
+        closeBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
             }
         });
         return  view;

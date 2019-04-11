@@ -25,8 +25,7 @@ public class PaymentActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu_camera));
+        getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.back_button_backgroud));
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

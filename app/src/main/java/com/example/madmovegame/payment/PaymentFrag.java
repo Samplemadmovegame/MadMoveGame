@@ -26,14 +26,14 @@ import com.example.madmovegame.payment.adapter.PaymentListAdapter;
  * create an instance of this fragment.
  */
 public class PaymentFrag extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private OnFragmentInteractionListener mListener;
 
     private Contest contest;
     private RecyclerView mPaymentRecyclerView;
     private PaymentListAdapter mPaymentListAdapter;
+    private TextView price;
 
     public PaymentFrag() {
         // Required empty public constructor
@@ -61,7 +61,7 @@ public class PaymentFrag extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_payment, container, false);
-        TextView price = view.findViewById(R.id.price);
+         price = view.findViewById(R.id.price);
         mPaymentRecyclerView = view.findViewById(R.id.payment_recycler_view);
         price.setText(contest.getEntryPrice());
         return view;
@@ -70,6 +70,7 @@ public class PaymentFrag extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        price.setText(getActivity().getResources().getString(R.string.Rs)+"  "+"10");
         setUpPaymentListAdapter();
     }
 

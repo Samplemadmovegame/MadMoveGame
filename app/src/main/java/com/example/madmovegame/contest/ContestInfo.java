@@ -1,7 +1,6 @@
 package com.example.madmovegame.contest;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.adapter.RankListAdapter;
@@ -29,10 +29,11 @@ public class ContestInfo extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
-    private Contest mParam1;
+    private Contest contest;
     private RecyclerView mRankRecyclerView;
     private RankListAdapter mRankListAdapter;
     private Button joinContestBt;
+    private TextView entryPrice;
 
 
     private OnContestInfoFragmentInteractionListener mListener;
@@ -54,7 +55,7 @@ public class ContestInfo extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getParcelable(ARG_PARAM1);
+            contest = getArguments().getParcelable(ARG_PARAM1);
 
         }
     }
@@ -65,6 +66,9 @@ public class ContestInfo extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contest_info, container, false);
         mRankRecyclerView = view.findViewById(R.id.rank_recycler_view);
+        entryPrice = view.findViewById(R.id.entry_price);
+
+        entryPrice.setText(getActivity().getResources().getString(R.string.Rs)+" "+contest.getEntryPrice());
         joinContestBt = view.findViewById(R.id.join_contest_bt);
         joinContestBt.setOnClickListener(new View.OnClickListener() {
             @Override
