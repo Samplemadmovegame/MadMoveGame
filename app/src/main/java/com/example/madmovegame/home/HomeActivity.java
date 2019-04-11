@@ -38,6 +38,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         ImageView backImg = navigationView.getHeaderView(0)
                 .findViewById(R.id.back);

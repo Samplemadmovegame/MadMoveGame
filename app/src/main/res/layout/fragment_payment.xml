@@ -45,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_0dp"
         android:layout_marginTop="@dimen/dim_10dp"
+        android:layoutAnimation="@anim/layout_animation_from_bottom"
         android:id="@+id/payment_recycler_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout1">
