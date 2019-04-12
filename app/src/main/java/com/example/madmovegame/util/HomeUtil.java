@@ -1,6 +1,6 @@
 package com.example.madmovegame.util;
 
-import com.example.madmovegame.Const;
+import com.example.madmovegame.constant.Const;
 import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.home.model.Sport;
 

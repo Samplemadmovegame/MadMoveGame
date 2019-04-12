@@ -1,6 +1,6 @@
 package com.example.madmovegame.util;
 
-import com.example.madmovegame.Const;
+import com.example.madmovegame.constant.Const;
 import com.example.madmovegame.contest.model.Contest;
 import com.example.madmovegame.contest.model.RankInfo;
 import com.example.madmovegame.payment.model.Payment;

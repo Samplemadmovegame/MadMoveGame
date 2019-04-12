@@ -2,7 +2,6 @@ package com.example.madmovegame.home;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
 import com.example.madmovegame.R;
@@ -20,9 +18,7 @@ import com.example.madmovegame.home.adapter.AllSportsListAdapter;
 import com.example.madmovegame.home.adapter.SportsListAdapter;
 import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.util.HomeUtil;
-import com.example.madmovegame.utility.AppAnimationUtil;
-
-import java.util.ArrayList;
+import com.example.madmovegame.util.AppAnimationUtil;
 
 
 public class HomeFrag extends Fragment {

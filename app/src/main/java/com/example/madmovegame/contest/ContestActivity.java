@@ -2,11 +2,9 @@ package com.example.madmovegame.contest;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,13 +12,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.madmovegame.Const;
+import com.example.madmovegame.constant.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.model.Contest;
 import com.example.madmovegame.home.model.AllSports;
 import com.example.madmovegame.payment.PaymentActivity;
 import com.example.madmovegame.team.TeamActivity;
-import com.example.madmovegame.team.model.Team;
+import com.example.madmovegame.util.AppAnimationUtil;
 
 public class ContestActivity extends AppCompatActivity implements ContestFrag.OnContestFragmentInteractionListener, ContestInfo.OnContestInfoFragmentInteractionListener {
     public static final String PARAM = "param";
@@ -41,7 +39,9 @@ public class ContestActivity extends AppCompatActivity implements ContestFrag.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.back_button_backgroud));
+
         getSupportFragmentManager().beginTransaction().add(R.id.container, ContestFrag.newInstance()).commit();
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -59,6 +59,11 @@ public class ContestActivity extends AppCompatActivity implements ContestFrag.On
         setTeam2Image();
         team1Name.setText(sport.getTeam1());
         team2Name.setText(sport.getTeam2());
+
+        AppAnimationUtil.setAnimation(this,R.anim.left_to_right,team1Img);
+        AppAnimationUtil.setAnimation(this,R.anim.left_to_right,team1Name);
+        AppAnimationUtil.setAnimation(this,R.anim.right_to_left,team2Img);
+        AppAnimationUtil.setAnimation(this,R.anim.right_to_left,team2Name);
 
     }
 

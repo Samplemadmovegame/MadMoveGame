@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".team.TeamFrag">
 
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout3"
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/dim_10dp"
         android:background="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -31,62 +31,70 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim_20dp"
             android:gravity="top"
-            android:text="Create Team"
-            android:textColor="@color/white"
-            android:textSize="18sp"
+            android:text="Create  Team"
             android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout">
+
         <TextView
             android:id="@+id/player_v"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dim_20dp"
-            android:layout_marginTop="@dimen/dim_10dp"
             android:text="Players"
             android:textColor="@color/white"
-            android:textSize="@dimen/dim_20sp"
+            android:textSize="@dimen/dim_18sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/back_bt" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/credit_left_v"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_10dp"
             android:layout_marginRight="@dimen/dim_20dp"
             android:text="Credit Left"
             android:textColor="@color/white"
-            android:textSize="@dimen/dim_20sp"
+            android:textSize="@dimen/dim_18sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/back_bt" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_10dp"
             android:text="Max 7 Player from team"
             android:textColor="@color/white"
             android:textSize="@dimen/dim_10sp"
+            android:id="@+id/max_player_tv"
             app:layout_constraintLeft_toRightOf="@+id/player_v"
             app:layout_constraintRight_toLeftOf="@+id/credit_left_v"
-            app:layout_constraintTop_toBottomOf="@+id/back_bt" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/total_selected_player"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dim_20dp"
-            android:paddingRight="@dimen/dim_5dp"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:gravity="center"
             android:text="0"
             android:textColor="@color/white"
             android:textSize="@dimen/dim_15sp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/slash_symb"
+            app:layout_constraintStart_toStartOf="@id/player_v"
             app:layout_constraintTop_toBottomOf="@+id/player_v" />
 
         <TextView
@@ -104,21 +112,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="11"
+            android:id="@+id/total_player_no_tv"
             android:textColor="@color/white"
             android:textSize="@dimen/dim_15sp"
-            app:layout_constraintLeft_toRightOf="@+id/slash_symb"
+            app:layout_constraintLeft_toRightOf="@id/slash_symb"
             app:layout_constraintTop_toBottomOf="@+id/player_v" />
 
         <TextView
             android:id="@+id/credit_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="@dimen/dim_20dp"
+            android:layout_marginRight="@dimen/dim_40dp"
             android:text="110.0"
             android:textColor="@color/white"
             android:textSize="@dimen/dim_15sp"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/credit_left_v" />
+
 
         <ImageView
             android:layout_width="match_parent"
@@ -126,15 +136,13 @@
             android:background="@drawable/bottom_curve"
             app:layout_constraintTop_toBottomOf="@id/credit_left" />
 
-
     </android.support.constraint.ConstraintLayout>
-
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/layout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/layout1"
+        app:layout_constraintBottom_toTopOf="@+id/line"
         app:layout_constraintTop_toBottomOf="@id/layout3">
 
         <ImageView
@@ -193,6 +201,22 @@
 
     </android.support.constraint.ConstraintLayout>
 
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/layout4" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_30dp"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorAccent" />
+
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -202,7 +226,7 @@
         android:background="@color/gray"
         android:paddingLeft="@dimen/dim_20dp"
         android:paddingRight="@dimen/dim_20dp"
-        app:layout_constraintTop_toBottomOf="@+id/layout4">
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout">
 
 
         <TextView
@@ -253,16 +277,14 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/team_recycler_view"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_0dp"
-        android:layoutAnimation="@anim/layout_animation_from_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/layout1"
-        tools:layout_editor_absoluteY="50dp">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
 
-    </android.support.v7.widget.RecyclerView>
-
+    </android.support.v4.view.ViewPager>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/view"
@@ -297,10 +319,10 @@
             android:layout_marginLeft="@dimen/dim_30dp"
             android:layout_marginRight="@dimen/dim_30dp"
             android:background="@drawable/curve_outline"
+            android:enabled="false"
             android:text="CONTINUE"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dim_12sp"
-            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/team_preview_bt"
             app:layout_constraintRight_toRightOf="parent"

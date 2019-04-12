@@ -1,9 +1,9 @@
 package com.example.madmovegame.team;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,20 +20,22 @@ import com.example.madmovegame.R;
  * Use the {@link TeamPreview#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class TeamPreview extends Fragment {
 
     private OnTeamPreviewFragmentInteractionListener mListener;
     private Button continue_bt;
     private ImageView closeBt;
+    private float height;
+    private float width;
+
 
     public TeamPreview() {
         // Required empty public constructor
     }
 
     public static TeamPreview newInstance() {
-
         Bundle args = new Bundle();
-
         TeamPreview fragment = new TeamPreview();
         fragment.setArguments(args);
         return fragment;
@@ -49,9 +51,9 @@ public class TeamPreview extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_team_preview, container, false);
-        continue_bt=view.findViewById(R.id.continue_bt);
-        closeBt=view.findViewById(R.id.close_bt);
+        View view = inflater.inflate(R.layout.fragment_team_preview, container, false);
+        continue_bt = view.findViewById(R.id.continue_bt);
+        closeBt = view.findViewById(R.id.close_bt);
         continue_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +66,7 @@ public class TeamPreview extends Fragment {
                 getActivity().onBackPressed();
             }
         });
-        return  view;
+        return view;
     }
 
 
@@ -83,6 +85,34 @@ public class TeamPreview extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+
+    public void moveImage() {
+
+        DisplayMetrics displaymetrics = getResources().getDisplayMetrics();
+        getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        height = displaymetrics.heightPixels;
+        width = displaymetrics.widthPixels;
+
+
+//        ObjectAnimator animTranslateY = ObjectAnimator.ofFloat(,
+//                "translationY", blue_1.getY() + getheight(67));
+//        animTranslateY.setDuration(1000);
+//
+//        ObjectAnimator animTranslateX = ObjectAnimator.ofFloat(img,
+//                "translationX", blue_1.getX() + getwidth(128));
+//        animTranslateX.setDuration(1000);
+    }
+
+    private float getheight(float val) {
+
+        return (this.height * val) / 800;
+    }
+
+
+    private float getwidth(float val) {
+        return (this.width * val) / 480;
     }
 
     /**

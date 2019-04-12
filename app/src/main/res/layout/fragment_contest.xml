@@ -82,6 +82,7 @@
                 android:background="@drawable/curve_border"
                 android:padding="@dimen/dim_5dp"
                 android:text="All filter"
+                android:id="@+id/filter_bt"
                 android:textSize="@dimen/dim_8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -98,6 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_0dp"
         android:layout_marginTop="@dimen/dim_10dp"
+        android:layoutAnimation="@anim/layout_animation_from_bottom"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/layout1">
 

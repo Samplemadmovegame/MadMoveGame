@@ -1,10 +1,9 @@
 package com.example.madmovegame.home;
 
-import android.graphics.drawable.Drawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.res.ResourcesCompat;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -17,16 +16,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
+import com.example.madmovegame.More.MoreActivity;
+import com.example.madmovegame.More.MoreFrag;
 import com.example.madmovegame.R;
+import com.example.madmovegame.feed.FeedActivity;
+import com.example.madmovegame.feed.FeedFrag;
+import com.example.madmovegame.matches.MatchesFrag;
+import com.example.madmovegame.matches.MathcesActivity;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -45,16 +52,23 @@ public class HomeActivity extends AppCompatActivity
         backImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //@TODO
-                Log.v("*1--", "clicked");
                 onBackPressed();
             }
         });
 
-        //@TODO
+        // set custom image for navigation icon
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.profile_circle_backgroud));
 
-        getSupportFragmentManager().beginTransaction().add(R.id.container, HomeFrag.newInstance()).commit();
+        //init bottom navigation with default
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.app_logo));
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, HomeFrag.newInstance()).commit();
+
     }
 
     @Override
@@ -63,7 +77,7 @@ public class HomeActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            finish();
         }
     }
 
@@ -113,4 +127,40 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.nav_home:
+                    getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.app_logo));
+                    getSupportActionBar().setDisplayUseLogoEnabled(true);
+                    getSupportActionBar().setDisplayShowTitleEnabled(false);
+                    getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, HomeFrag.newInstance()).commit();
+                    return true;
+                case R.id.nav_feed:
+                    getSupportActionBar().setTitle("Feed");
+                    getSupportActionBar().setDisplayUseLogoEnabled(false);
+                    getSupportActionBar().setDisplayShowTitleEnabled(true);
+                    getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, FeedFrag.newInstance()).commit();
+                    return true;
+                case R.id.nav_matches:
+                    getSupportActionBar().setTitle("Matches");
+                    getSupportActionBar().setDisplayUseLogoEnabled(false);
+                    getSupportActionBar().setDisplayShowTitleEnabled(true);
+                    getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, MatchesFrag.newInstance()).commit();
+                    return true;
+                case R.id.nav_more:
+                    getSupportActionBar().setTitle("More");
+                    getSupportActionBar().setDisplayUseLogoEnabled(false);
+                    getSupportActionBar().setDisplayShowTitleEnabled(true);
+                    getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, MoreFrag.newInstance()).commit();
+                    return true;
+            }
+            return false;
+        }
+    };
+
 }

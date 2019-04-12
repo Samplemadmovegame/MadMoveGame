@@ -39,4 +39,7 @@
     <string name="invite_ref">Invite Referrals</string>
     <string name="my_setting">My Info Setting</string>
     <string name="point_system">Point System</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

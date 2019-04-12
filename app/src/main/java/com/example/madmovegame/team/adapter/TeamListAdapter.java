@@ -10,9 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.madmovegame.Const;
+import com.example.madmovegame.constant.Const;
 import com.example.madmovegame.R;
-import com.example.madmovegame.payment.model.Payment;
 import com.example.madmovegame.team.model.Team;
 import com.example.madmovegame.util.MockData;
 

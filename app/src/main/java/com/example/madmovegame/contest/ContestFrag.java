@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import android.widget.Button;
 import com.example.madmovegame.R;
 import com.example.madmovegame.contest.adapter.ContestListAdapter;
 import com.example.madmovegame.contest.model.Contest;
-import com.example.madmovegame.home.model.AllSports;
+import com.example.madmovegame.util.AppAnimationUtil;
 
 
 public class ContestFrag extends Fragment {
@@ -25,7 +24,7 @@ public class ContestFrag extends Fragment {
     private RecyclerView mConstestRecyclerView;
     private ContestListAdapter mContestListAdapter;
     private OnContestFragmentInteractionListener mListener;
-    private Button createTeamBt;
+    private Button createTeamBt ,createContestBt,enterContestBt, entryfeeBt, contestSizeBt,filterBt;
 
     public ContestFrag() {
         // Required empty public constructor
@@ -54,12 +53,26 @@ public class ContestFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contest, container, false);
         mConstestRecyclerView = view.findViewById(R.id.constest_recycler_view);
         createTeamBt = view.findViewById(R.id.create_team_bt);
+        enterContestBt = view.findViewById(R.id.button1);
+        createContestBt = view.findViewById(R.id.button2);
+        entryfeeBt = view.findViewById(R.id.button3);
+        contestSizeBt = view.findViewById(R.id.button4);
+        filterBt = view.findViewById(R.id.filter_bt);
+
         createTeamBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.openTeamAcitivity();
             }
         });
+
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,createContestBt);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,filterBt);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.right_to_left,contestSizeBt);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,enterContestBt);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.left_to_right,entryfeeBt);
+        AppAnimationUtil.setAnimation(getActivity(),R.anim.bottom_to_top,createTeamBt);
+
         return view;
     }
 

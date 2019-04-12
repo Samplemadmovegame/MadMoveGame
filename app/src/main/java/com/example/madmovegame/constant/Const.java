@@ -1,4 +1,4 @@
-package com.example.madmovegame;
+package com.example.madmovegame.constant;
 
 public class Const {
     public static final String CRICKET="Cricket";

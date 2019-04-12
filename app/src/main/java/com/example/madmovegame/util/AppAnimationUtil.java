@@ -1,4 +1,4 @@
-package com.example.madmovegame.utility;
+package com.example.madmovegame.util;
 
 import android.content.Context;
 import android.view.View;

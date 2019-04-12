@@ -15,23 +15,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dim_70dp"
-            android:background="?attr/colorPrimary"
+            app:titleMarginStart="@dimen/dim_20dp"
             app:popupTheme="@style/AppTheme.PopupOverlay">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="@dimen/dim_170dp"
-                    android:layout_height="@dimen/dim_40dp"
-                    android:layout_gravity="center"
-                    android:gravity="center_vertical"
-                    android:background="@drawable/mad_move_logo"
-                    />
-
-            </FrameLayout>
-
 
         </android.support.v7.widget.Toolbar>
 

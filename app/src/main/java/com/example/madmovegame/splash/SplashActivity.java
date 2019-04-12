@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.example.madmovegame.R;
 import com.example.madmovegame.intro.IntroductionActivity;
-import com.example.madmovegame.utility.AppAnimationUtil;
+import com.example.madmovegame.util.AppAnimationUtil;
 
 public class SplashActivity extends AppCompatActivity {
     private ImageView topImageView, bottomImageView;

@@ -3,7 +3,6 @@ package com.example.madmovegame.team;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.madmovegame.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.home.model.AllSports;
 

@@ -13,11 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.madmovegame.Const;
+import com.example.madmovegame.constant.Const;
 import com.example.madmovegame.R;
 import com.example.madmovegame.home.model.AllSports;
-import com.example.madmovegame.home.model.Sport;
-import com.example.madmovegame.util.HomeUtil;
 
 import java.util.List;
 

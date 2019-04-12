@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.madmovegame.R;
-import com.example.madmovegame.utility.AppAnimationUtil;
+import com.example.madmovegame.util.AppAnimationUtil;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,11 +71,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         switch (view.getId()) {
             case R.id.forget_password_tv:
-              //  loginFragmentListeners.openForgetPasswordFragment();
+               loginFragmentListeners.openForgetPasswordFragment();
                 break;
 
             case R.id.create_account_tv:
-             //   loginFragmentListeners.openCreateAccountFragment();
+               loginFragmentListeners.openCreateAccountFragment();
                 break;
 
             case R.id.login_button:

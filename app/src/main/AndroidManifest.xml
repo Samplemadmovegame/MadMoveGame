@@ -6,14 +6,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".setting.SettingActivity" />
+        <activity android:name=".navigation.NavigationActivity" />
+        <activity android:name=".More.MoreActivity" />
+        <activity android:name=".feed.FeedActivity" />
+        <activity android:name=".matches.MathcesActivity" />
         <activity
             android:name=".team.TeamActivity"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".payment.PaymentActivity"
             android:theme="@style/FullscreenTheme" />
@@ -23,18 +28,13 @@
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme">
-
-        </activity>
-
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".login.LoginActivity"
             android:theme="@style/FullscreenTheme" />
-
         <activity
             android:name=".intro.IntroductionActivity"
             android:theme="@style/FullscreenTheme" />
-
         <activity
             android:name=".splash.SplashActivity"
             android:theme="@style/FullscreenTheme">
@@ -44,7 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
