@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.madmovegame.R;
 
 public class SettingActivity extends AppCompatActivity {
+    public static final String TAG = "SettingAcitity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

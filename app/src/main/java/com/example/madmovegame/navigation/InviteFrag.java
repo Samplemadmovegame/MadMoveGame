@@ -13,14 +13,14 @@ import com.example.madmovegame.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RewardFrag.OnFragmentInteractionListener} interface
+ * {@link InviteFrag.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RewardFrag#newInstance} factory method to
+ * Use the {@link InviteFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RewardFrag extends Fragment {
+public class InviteFrag extends Fragment {
     
-    public static final String TAG="RewardFrag";
+    public static final String TAG ="InviteFrag";
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -32,15 +32,15 @@ public class RewardFrag extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public RewardFrag() {
+    public InviteFrag() {
         // Required empty public constructor
     }
 
-    public static RewardFrag newInstance() {
+    public static InviteFrag newInstance() {
         
         Bundle args = new Bundle();
         
-        RewardFrag fragment = new RewardFrag();
+        InviteFrag fragment = new InviteFrag();
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,7 +57,7 @@ public class RewardFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_reward, container, false);
+        return inflater.inflate(R.layout.fragment_invite, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

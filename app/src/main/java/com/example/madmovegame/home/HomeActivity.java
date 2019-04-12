@@ -23,6 +23,14 @@ import com.example.madmovegame.feed.FeedActivity;
 import com.example.madmovegame.feed.FeedFrag;
 import com.example.madmovegame.matches.MatchesFrag;
 import com.example.madmovegame.matches.MathcesActivity;
+import com.example.madmovegame.navigation.BalanceFrag;
+import com.example.madmovegame.navigation.MyInfoSetting;
+import com.example.madmovegame.navigation.NavigationActivity;
+import com.example.madmovegame.navigation.PointSystemFrag;
+import com.example.madmovegame.navigation.RewardFrag;
+import com.example.madmovegame.navigation.UserFrag;
+import com.example.madmovegame.notification.NotificationActivity;
+import com.example.madmovegame.setting.SettingActivity;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -96,7 +104,8 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.notification) {
+            startActivity(new Intent(this, NotificationActivity.class));
             return true;
         }
 
@@ -107,21 +116,32 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
+        Intent intent = new Intent(this, NavigationActivity.class);
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        if (id == R.id.account) {
+            intent.putExtra(NavigationActivity.PARAM, UserFrag.TAG);
+            startActivity(intent);
+        } else if (id == R.id.balance) {
+            intent.putExtra(NavigationActivity.PARAM, BalanceFrag.TAG);
+            startActivity(intent);
+
+        } else if (id == R.id.reward) {
+            intent.putExtra(NavigationActivity.PARAM, RewardFrag.TAG);
+            startActivity(intent);
+
+        } else if (id == R.id.invite) {
+
+        } else if (id == R.id.my_setting) {
+            intent.putExtra(NavigationActivity.PARAM, MyInfoSetting.TAG);
+            startActivity(intent);
+
+        } else if (id == R.id.point) {
+            intent.putExtra(NavigationActivity.PARAM, PointSystemFrag.TAG);
+            startActivity(intent);
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

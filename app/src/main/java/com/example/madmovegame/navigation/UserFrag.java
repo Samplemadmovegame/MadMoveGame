@@ -19,6 +19,8 @@ import com.example.madmovegame.R;
  * create an instance of this fragment.
  */
 public class UserFrag extends Fragment {
+
+    public static final String TAG="UserFrag";
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,20 +36,11 @@ public class UserFrag extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UserFrag.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static UserFrag newInstance(String param1, String param2) {
-        UserFrag fragment = new UserFrag();
+    public static UserFrag newInstance() {
+
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+
+        UserFrag fragment = new UserFrag();
         fragment.setArguments(args);
         return fragment;
     }
@@ -78,12 +71,12 @@ public class UserFrag extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
     }
 
     @Override
