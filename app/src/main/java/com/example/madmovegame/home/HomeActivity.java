@@ -24,6 +24,7 @@ import com.example.madmovegame.feed.FeedFrag;
 import com.example.madmovegame.matches.MatchesFrag;
 import com.example.madmovegame.matches.MathcesActivity;
 import com.example.madmovegame.navigation.BalanceFrag;
+import com.example.madmovegame.navigation.InviteFrag;
 import com.example.madmovegame.navigation.MyInfoSetting;
 import com.example.madmovegame.navigation.NavigationActivity;
 import com.example.madmovegame.navigation.PointSystemFrag;
@@ -116,7 +117,6 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
         Intent intent = new Intent(this, NavigationActivity.class);
         int id = item.getItemId();
 
@@ -132,6 +132,8 @@ public class HomeActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.invite) {
+            intent.putExtra(NavigationActivity.PARAM, InviteFrag.TAG);
+            startActivity(intent);
 
         } else if (id == R.id.my_setting) {
             intent.putExtra(NavigationActivity.PARAM, MyInfoSetting.TAG);
@@ -161,19 +163,19 @@ public class HomeActivity extends AppCompatActivity
                     getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, HomeFrag.newInstance()).commit();
                     return true;
                 case R.id.nav_feed:
-                    getSupportActionBar().setTitle("Feed");
+                    getSupportActionBar().setTitle(getResources().getString(R.string.feed));
                     getSupportActionBar().setDisplayUseLogoEnabled(false);
                     getSupportActionBar().setDisplayShowTitleEnabled(true);
                     getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, FeedFrag.newInstance()).commit();
                     return true;
                 case R.id.nav_matches:
-                    getSupportActionBar().setTitle("Matches");
+                    getSupportActionBar().setTitle(getResources().getString(R.string.matches));
                     getSupportActionBar().setDisplayUseLogoEnabled(false);
                     getSupportActionBar().setDisplayShowTitleEnabled(true);
                     getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, MatchesFrag.newInstance()).commit();
                     return true;
                 case R.id.nav_more:
-                    getSupportActionBar().setTitle("More");
+                    getSupportActionBar().setTitle(getResources().getString(R.string.more));
                     getSupportActionBar().setDisplayUseLogoEnabled(false);
                     getSupportActionBar().setDisplayShowTitleEnabled(true);
                     getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, MoreFrag.newInstance()).commit();

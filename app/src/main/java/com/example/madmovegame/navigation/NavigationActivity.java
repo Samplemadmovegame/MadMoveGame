@@ -17,12 +17,15 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
 
 
+        //setup toolbar for this activity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //set custom back button image
         getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.drawable.back_button_backgroud));
 
+        // get tag value to open target fragment
         String tag = getIntent().getExtras().getString(PARAM);
         openFrag(tag);
 
@@ -44,32 +47,32 @@ public class NavigationActivity extends AppCompatActivity {
         switch (tag) {
             case UserFrag.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, UserFrag.newInstance()).commit();
-                getSupportActionBar().setTitle("My Account");
+                getSupportActionBar().setTitle(getResources().getString(R.string.my_account));
                 break;
 
             case PointSystemFrag.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, PointSystemFrag.newInstance()).commit();
-                getSupportActionBar().setTitle("My Balance");
+                getSupportActionBar().setTitle(getResources().getString(R.string.point_system));
                 break;
 
             case RewardFrag.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, RewardFrag.newInstance()).commit();
-                getSupportActionBar().setTitle("My Reward Offer");
+                getSupportActionBar().setTitle(getResources().getString(R.string.my_reward_offer));
                 break;
 
             case BalanceFrag.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, BalanceFrag.newInstance()).commit();
-                getSupportActionBar().setTitle("My Info Setting");
+                getSupportActionBar().setTitle(getResources().getString(R.string.my_balance));
                 break;
 
             case MyInfoSetting.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, MyInfoSetting.newInstance()).commit();
-                getSupportActionBar().setTitle("Point System");
+                getSupportActionBar().setTitle(getResources().getString(R.string.my_setting));
                 break;
 
             case InviteFrag.TAG:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, InviteFrag.newInstance()).commit();
-                getSupportActionBar().setTitle("Invite");
+                getSupportActionBar().setTitle(getResources().getString(R.string.invite_ref));
                 break;
 
         }

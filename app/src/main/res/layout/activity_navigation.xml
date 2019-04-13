@@ -14,9 +14,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dim_70dp"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleMarginStart="@dimen/dim_20dp">
+            android:layout_height="?actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
         </android.support.v7.widget.Toolbar>
 

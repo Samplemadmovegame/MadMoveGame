@@ -29,17 +29,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="Rs">\u20B9</string>
-    <string name="home">Home</string>
-    <string name="matches">Matches</string>
-    <string name="feed">Feed</string>
-    <string name="more">More</string>
-    <string name="my_account">My Account</string>
-    <string name="my_balance">My Balance</string>
-    <string name="my_reward_offer">My Reward Offer</string>
-    <string name="invite_ref">Invite Referrals</string>
-    <string name="my_setting">My Info Setting</string>
-    <string name="point_system">Point System</string>
+    <string name="home">HOME</string>
+    <string name="matches">MATCHES</string>
+    <string name="feed">FEED</string>
+    <string name="more">MORE</string>
+    <string name="my_account">MY ACCOUNT</string>
+    <string name="my_balance">MY BALANCE</string>
+    <string name="my_reward_offer">MY REWARD &amp; OFFER</string>
+    <string name="invite_ref">INVITE REFERRALS</string>
+    <string name="my_setting">MY INFO &amp; SETTING</string>
+    <string name="point_system">POINT SYSTEM</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
